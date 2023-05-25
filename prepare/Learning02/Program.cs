@@ -19,11 +19,6 @@ class Program
         job2._startYear= 2017;
         job2._endYear = 2018;
 
-        // Console.WriteLine($"{job1._company}");
-        // Console.WriteLine(job1._jobTitle);
-
-        job1.displayJob();
-        job2.displayJob();
 
         Resume myResume = new Resume();
         myResume._name = "Cosmo Ng";
