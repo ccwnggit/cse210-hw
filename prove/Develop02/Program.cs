@@ -1,5 +1,9 @@
 using System;
 
+    // Additional creativity:
+    // 1) Clear journal entries before loading from journal files
+    // 2) Presume one single journal file to be loaded from or saved to be "myjournal.txt" unless specified otherwise
+    // 3) If user input option number other than 1-5, an error reminder to the user is issued.
 
 
 
