@@ -85,10 +85,9 @@ public class Journal
     public void Save()
     // Save the current journal (the complete list of entries) to that file location
     {
-
-        Console.Write("Save your entries is myjournal.txt? (Y/N) ");
-        string truefalsefileName = Console.ReadLine();
         string filename = "myjournal.txt";
+        Console.Write("Save your entries to myjournal.txt? (Y/N) ");
+        string truefalsefileName = Console.ReadLine();        
 
         if (truefalsefileName == "N")
         {
