@@ -18,17 +18,17 @@ class Program
         // set the instance of verse
 
         Scripture scriptureToRemember = new Scripture();
-        Console.WriteLine(scriptureToRemember._hiddenCount);
+        // Console.WriteLine(scriptureToRemember._hiddenCount);
 
         scriptureToRemember.Set("And whatsoever ye shall ask the Father in my name , which is right , believing that you shall receive , behold it shall be given unto you .");
 
-        f1.Display();                   // Display reference for the first time
+        f1.Display();                           // Display reference for the first time
         scriptureToRemember.DisplayOrg();       // Display the text for the first time
         Console.WriteLine();
-        Console.WriteLine("Please hit <return> or to hide words: ");
+        Console.WriteLine("Please hit <return> to hide words or \"quit\" to quit:");
         Console.Write(">");
 
-        // form an index list without puntuactions. The value points to the scripture words.
+        // form an index list without punctuations. The value points to the scripture words.
         List<int> listOfIndices = scriptureToRemember.GetWordPosList("-p");     
 
         // variables used inside the program
@@ -42,6 +42,7 @@ class Program
 
         // setup random number generation
         Random rnd = new Random();
+
         
         do                                                      // if words hidden equal or greater than the verse length, quit
         {
@@ -111,7 +112,7 @@ class Program
             scriptureToRemember.Display();
             
             Console.WriteLine();
-            Console.WriteLine("Please hit <return> or to hide words: ");
+            Console.WriteLine("Please hit <return> to hide words or enter \"quit\" to quit");
             Console.Write(">");
             string userInput=Console.ReadLine();
             if (userInput == "quit")
@@ -124,7 +125,7 @@ class Program
         scriptureToRemember.Display();
         Console.WriteLine();
         Console.WriteLine();
-        Console.WriteLine("Thanks for using! Quit.");
+        Console.WriteLine("Thanks for using!");
         Console.WriteLine();
         Console.WriteLine();
     }

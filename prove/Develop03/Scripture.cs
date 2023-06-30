@@ -64,8 +64,8 @@ public class Scripture
         
             }
         } 
-        Console.WriteLine(_wordPositions);
-        return _wordPositions;                         // list of word positions in the scripture where words are located, excluding commas and full-stops.
+       
+        return _wordPositions;                     // list of word positions in the scripture where words are located, excluding commas and full-stops.
     }
 
     public List<int> GetWordPos()
