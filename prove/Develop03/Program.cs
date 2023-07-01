@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 class Program
 {
@@ -7,6 +8,49 @@ class Program
 
     static void Main(string[] args)
     {
+        /*
+        string inputfile = "scriptures.txt";
+        string[] lines = System.IO.File.ReadAllLines(inputfile);
+        foreach (string line in lines)
+        {
+            Reference f = new Reference();
+            Scripture s = new Scripture();
+            string  lineT = line.Trim(); // remove leading and trailing spaces
+            string[] parts = lineT.Split("\"",2);
+            if (parts.Length ==2) // Make sure the line has two expected fields
+            {
+                char[] delimiters = {' ',':','-'}; 
+                string [] referenceParts = parts[0].Split(delimiters);
+
+            int n;                                                       // Check if the beginning is a number
+            bool isNumber = int.TryParse(referenceParts[0], out n);
+            if (isNumber)
+            {
+                f.SetBook(referenceParts[0]+referenceParts[1]);
+                f.SetChapter(Int32.Parse(referenceParts[2]));
+                f.SetVerseStart(Int32.Parse(referenceParts[3]));
+                if (referenceParts.Count() == 5)
+                {
+                    f.SetVerseEnd(Int32.Parse(referenceParts[4]));
+                }
+            }
+            else
+            {   
+                f.SetBook(referenceParts[0]);
+                f.SetChapter(Int32.Parse(referenceParts[1]));
+                f.SetVerseStart(Int32.Parse(referenceParts[2]));
+                if (referenceParts.Count() == 4)
+                {
+                    f.SetVerseEnd(Int32.Parse(referenceParts[3]));
+                }
+            }
+            // _scriptureEntries.Add(entry);
+            }
+
+        }
+        */
+        
+        
         // set reference
 
         Reference f1 = new Reference();
@@ -46,6 +90,12 @@ class Program
         
         do                                                      // if words hidden equal or greater than the verse length, quit
         {
+            string userInput=Console.ReadLine();
+            if (userInput == "quit")
+            {
+                break;
+            }
+            
             Console.Clear();                                    // clear screen
             f1.Display();                                       // display reference
 
@@ -114,11 +164,7 @@ class Program
             Console.WriteLine();
             Console.WriteLine("Please hit <return> to hide words or enter \"quit\" to quit");
             Console.Write(">");
-            string userInput=Console.ReadLine();
-            if (userInput == "quit")
-            {
-                break;
-            }
+            
         } while (listOfIndices.Count>0);
         
         f1.Display();
