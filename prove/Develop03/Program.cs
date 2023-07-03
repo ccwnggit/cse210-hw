@@ -9,13 +9,16 @@ class Program
 
     static void Main(string[] args)
     {
-        /*
+        /*  This  part of the program is to be developed and tested latter. It could involve changes in the Reference class
+        List <Scripture> s = new List<Scripture> ();
+        List <Reference> f = new List<Reference> ();
+
+        
         string inputfile = "scriptures.txt";
         string[] lines = System.IO.File.ReadAllLines(inputfile);
         foreach (string line in lines)
         {
-            Reference f = new Reference();
-            Scripture s = new Scripture();
+
             string  lineT = line.Trim(); // remove leading and trailing spaces
             string[] parts = lineT.Split("\"",2);
             if (parts.Length ==2) // Make sure the line has two expected fields
@@ -45,12 +48,14 @@ class Program
                     f.SetVerseEnd(Int32.Parse(referenceParts[3]));
                 }
             }
-            // _scriptureEntries.Add(entry);
+
+            f.Add(parts[0])
+            s.Add(parts[1]);
             }
 
         }
-        */
         
+        */
         
         // set reference
 
