@@ -1,6 +1,7 @@
 public class Scripture
 
 {
+    private Reference _reference;
     private string [] _inputString;
 
     private int _wordsCount;
@@ -11,6 +12,8 @@ public class Scripture
 
     public Scripture ()
     {
+        
+        _reference = null;
         _inputString = null;
         _wordsCount = 0;
         _hiddenCount = 0;
