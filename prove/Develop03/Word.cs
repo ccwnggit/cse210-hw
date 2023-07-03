@@ -20,6 +20,20 @@ public class Word
     
     }
 
+    public bool CheckHidden()
+    {
+        if (_word != GetUnderline())
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    
+
     public string GetUnderline()
     {
         // replace the word with underline
