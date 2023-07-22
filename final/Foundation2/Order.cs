@@ -11,18 +11,6 @@ public class Order
     const int _USAshippingCost = 5;
     const int _OutsideShippingCost = 35;
 
-    // Order()   
-    // {
-
-    // }                 
-    // {
-    //     Customer dummyCustomer = new Customer();
-    //     _customer = dummyCustomer;
-
-    //     List <Product> dummy = new List <Product> ();
-    //     _listOfProducts = dummy;
-
-    // }
 
     public void SetOrder(string productName, string productID, int productPrice, int productQuantity)
     {
@@ -37,8 +25,7 @@ public class Order
     public void SetCustomer(string customerName, string customerAddress)
     {
         _customer = new Customer();
-        // Address address = new Address();
-
+        
         _customer.SetName(customerName);
         _customer.SetAddress(customerAddress);
 
@@ -77,7 +64,6 @@ public class Order
             string printform = product.GetName() + " " + product.GetProductID();
             productNameAndCode.Add(printform);
         }
-        // Customer customer = new Customer();
         return _customer.GetName() +"\n" + string.Join("\n",productNameAndCode);
     }
 
