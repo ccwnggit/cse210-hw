@@ -24,15 +24,15 @@ public abstract class Event
 
     public void ListStandardDetails()
     {
-        Console.WriteLine("\nStandard Message:");
-        Console.WriteLine($"{_eventTitle}\n{_description}\n{_date}\n{_time}\n");
+        
+        Console.WriteLine($"Event Title: {_eventTitle}\nEvent Description: {_description}\nEvent Date: {_date}\nTime: {_time}");
         _address.DisplayAddressParticulars();
     }
 
     public void ShortDescription()
     {
-        Console.WriteLine("\nShort Message:");
-        Console.WriteLine ($"{_eventType}\n{_eventTitle}\n{_date}");
+        // Console.WriteLine("\nShort Message:");
+        Console.WriteLine ($"Event Type: {_eventType}\nEvent Title: {_eventTitle}\nEvent Date: {_date}");
     }
 
     public abstract void FullDetails();

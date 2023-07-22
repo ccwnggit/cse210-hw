@@ -17,7 +17,7 @@ public class Address
 
     public void DisplayAddressParticulars()
     {
-        Console.WriteLine($"{_streetAddress},{_city},{_stateOrProvince},{_country}\n ");
+        Console.WriteLine($"Event Address: {_streetAddress},{_city},{_stateOrProvince},{_country} ");
     }
 
 

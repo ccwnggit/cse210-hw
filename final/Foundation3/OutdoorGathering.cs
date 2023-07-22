@@ -13,7 +13,7 @@ public class OutdoorGathering: Event
 
     public override void FullDetails()
     {
-        Console.WriteLine("\nFull Message: ");
+       
         ListStandardDetails();
         Console.WriteLine($"Weather forecast: {_weatherForecastStatement}");
     }

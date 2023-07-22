@@ -7,9 +7,9 @@ public class Lecture: Event
 
     public override void FullDetails()
     {
-        Console.WriteLine ("\nFull Message: ");
+        
         ListStandardDetails();
-        Console.WriteLine($"Speaker: {_speaker}. Capacity: {_capacity}");
+        Console.WriteLine($"Speaker: {_speaker}\nVenue Capacity: {_capacity}");
     }
 
     public void SetSpeaker(string speaker)
