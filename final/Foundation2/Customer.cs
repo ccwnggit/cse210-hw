@@ -18,7 +18,6 @@ public class Customer
     {
         _address = new Address();
         _address.setAddress(address);
-        // Console.WriteLine($"SetAddress: address1 {address}\n");
 
     }
 
