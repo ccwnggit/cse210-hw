@@ -41,19 +41,7 @@ namespace Foundation4
     {
         _pace = 60 / _speed;
     }
-    // public virtual void CalculateDistance()
-    // {
-    //     _distance = _speed * _lengthOfActivity;
-    // }
-
-    // public virtual void CalculateSpeed();
-    // {
-    //     return _distance / _lengthofActivity;
-    // }
-    // public abstract CalculatePace()
-    // {
-
-    // }
+    
     
     public string GetSummary()
     {
