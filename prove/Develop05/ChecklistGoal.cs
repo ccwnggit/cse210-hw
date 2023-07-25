@@ -2,7 +2,7 @@ public class ChecklistGoal: Goal
 {
     private int _interimPoints;
    
-    private int _NumTimesForBonus;
+    private int _numTimesForBonus;
     private int _bonus;
 
     private int _timesCompleted; 
@@ -12,7 +12,7 @@ public class ChecklistGoal: Goal
     public ChecklistGoal()
     {
         _interimPoints = 0;
-        _NumTimesForBonus = 0;
+        _numTimesForBonus = 0;
         _bonus = 0;
         _timesCompleted = 0;
 
@@ -21,7 +21,7 @@ public class ChecklistGoal: Goal
     public ChecklistGoal (string ChecklistGoalName,string ChecklistGoalDescription,string completionPlaceholder, int ChecklistInterimCompletionPoints, int RepeatForBonus, int Bonus): base (ChecklistGoalName,ChecklistGoalDescription, completionPlaceholder)
     {
         _interimPoints = ChecklistInterimCompletionPoints;
-        _NumTimesForBonus = RepeatForBonus;
+        _numTimesForBonus = RepeatForBonus;
         _bonus = Bonus;
         _timesCompleted = 0;
     }
@@ -41,7 +41,7 @@ public class ChecklistGoal: Goal
 
     public override void Display(string placeholder)
     {
-        Console.WriteLine($"[{placeholder}] {_name} ({_description}) - currently completed: {_timesCompleted}/{_NumTimesForBonus}");
+        Console.WriteLine($"[{placeholder}] {_name} ({_description}) - currently completed: {_timesCompleted}/{_numTimesForBonus}");
     }
 
     public override void DisplayCompleted(ref int totalPoints)
@@ -50,7 +50,7 @@ public class ChecklistGoal: Goal
         int pointGainedThisTime = _interimPoints;
 
         _timesCompleted ++;
-        if (_timesCompleted % _NumTimesForBonus ==0)            // will score bonus having accomplished it that many times
+        if (_timesCompleted % _numTimesForBonus ==0)            // will score bonus having accomplished it that many times
         {   // add bonus to accumulated points in this goal
             pointGainedThisTime = pointGainedThisTime + _bonus;
 
@@ -74,7 +74,7 @@ public class ChecklistGoal: Goal
     }
     public override string GetSaveString()
     {
-        string goalLine = "Checklist Goal:"+GetGoalName() + "," + GetGoalDescription() + "," + GetPlaceholder()+","+_interimPoints +","+_NumTimesForBonus+","+ _bonus +","+_timesCompleted;
+        string goalLine = "Checklist Goal:"+GetGoalName() + "," + GetGoalDescription() + "," + GetPlaceholder()+","+_interimPoints +","+_numTimesForBonus+","+ _bonus +","+_timesCompleted;
         return goalLine;
     }
     
