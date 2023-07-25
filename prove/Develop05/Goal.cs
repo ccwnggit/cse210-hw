@@ -6,7 +6,7 @@ public abstract class Goal
 
     protected string _completionPlaceholder;
 
-    int _points;        // saved points of individual goal
+    protected int _points;        // saved points of individual goal
 
 
     public Goal()
