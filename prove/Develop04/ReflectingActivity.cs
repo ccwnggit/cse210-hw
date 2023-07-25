@@ -11,13 +11,17 @@ public class ReflectingActivity : Activity
     private List<string> _randomPrompts;
     
     private List <string> _randomQuestions;
+
+    private string _name = "Reflecting";
+    private string _activityDescription = "This Activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of yor life.";
     
 
 
     public ReflectingActivity()
     {   _randomPrompts = null;
         _randomQuestions = null;
-    
+        setActivityName(_name);
+        setActivityDescription(_activityDescription);
     }
 
     
@@ -54,7 +58,8 @@ public class ReflectingActivity : Activity
         // Display motivation
         Console.WriteLine("Well done!!");
         Console.WriteLine($"You have completed another {_inputSeconds} seconds of the Reflecting Activity");
-        SpinnerPausing(3);
+        Console.WriteLine(GetEndingMessage());
+        SpinnerPausing(12);
 
     }   
 
@@ -91,8 +96,9 @@ public class ReflectingActivity : Activity
     }
 
     private void DisplayPrompt()
-    {
-        Console.WriteLine("Welcome to the Reflecting Activity.\n");
+    {   
+        setActivityName(_name);
+        Console.WriteLine(GetStartingMessage());
         Console.WriteLine("This Activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of yor life.");
         Console.Write("How long, in seconds, would you like for your session? ");
 

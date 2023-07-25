@@ -6,6 +6,7 @@ public class ListingActivity : Activity
     private int _inputSeconds;
 
     private List <string> _randomPrompt;
+    private string _name = "Listing";
 
 
     public ListingActivity()
@@ -52,7 +53,8 @@ public class ListingActivity : Activity
         Console.WriteLine($"You listed {inputItemsCount} items!\n");
         Console.WriteLine("Well done!!\n");
         Console.WriteLine($"You have completed another {_inputSeconds} seconds of the Listing Activity");
-        SpinnerPausing(5);
+        Console.WriteLine(GetEndingMessage());
+        SpinnerPausing(12);
     }
 
     public void SetPrompts(List <string> prompts)
@@ -84,8 +86,9 @@ public class ListingActivity : Activity
 
 private void DisplayPrompt()
     {
-        Console.WriteLine("Welcome to the Listing Activity.\n");
-        Console.WriteLine("This Activity will help you reflect on good things in your life by having you list as many things s you in a certain area.");
+        setActivityName(_name);
+        Console.WriteLine(GetStartingMessage());
+        Console.WriteLine("This Activity will help you reflect on good things in your life by having you list as many things as you can in a certain area.");
         Console.Write("How long, in seconds, would you like for your session? ");
 
     }

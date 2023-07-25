@@ -4,15 +4,20 @@ public class BreathingActivity : Activity
     
     private int _inputSeconds;
 
+    private string _name = "Breathing";
+
     public void RunActivity()
     {
         DisplayMessage();
         BreathingRoutine();
+        Console.WriteLine(GetEndingMessage());
+        SpinnerPausing(7);
     }
     public void DisplayMessage()
     {
         
-        Console.WriteLine("Welcome to the Breathing Activity.\n");
+        setActivityName(_name);
+        Console.WriteLine(GetStartingMessage());
         Console.WriteLine("This Activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
         Console.Write("How long, in seconds, would you like for your session? ");
         string inputSeconds = Console.ReadLine();

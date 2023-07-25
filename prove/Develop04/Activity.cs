@@ -2,11 +2,31 @@ public class Activity
 
 {
     private string _startingMessage = "";
-    private string _endingMessage = "You have done a good job!";
+    private string _endingMessage = "You have done a good job!\n";
+    private string _activityName;
+    private string _activityDescription;
+    private int _duration;
 
 
+    public void setActivityName(string name)
+    {
+        _activityName = name;
+
+    }
+
+    public void setActivityDescription(string description)
+    {
+        _activityDescription = description;
+    }
+
+    public void setDuration(int seconds)
+    {
+        _duration = seconds;
+    }
+    
     public string GetStartingMessage()
     {
+        _startingMessage = $"Welcome to the {_activityName} Activity.\n";
         return _startingMessage;
     }
 
