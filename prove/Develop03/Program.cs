@@ -70,9 +70,10 @@ class Program
         Scripture scriptureToRemember = new Scripture();
         // Console.WriteLine(scriptureToRemember._hiddenCount);
 
-        scriptureToRemember.Set("你 們 奉 我 的 名 , 無 論 向 父 求 什 麼 , 只 要 正 當 , 並 且 相 信 必 然 得 到 , 看 啊 , 你 們 求 的 就 必 賜 給 你 們.");
+        scriptureToRemember.Set("And whatsoever ye shall ask the Father in my name , which is right , believing that you shall receive , behold it shall be given unto you .");
 
         // And whatsoever ye shall ask the Father in my name , which is right , believing that you shall receive , behold it shall be given unto you .
+        // "你 們 奉 我 的 名 , 無 論 向 父 求 什 麼 , 只 要 正 當 , 並 且 相 信 必 然 得 到 , 看 啊 , 你 們 求 的 就 必 賜 給 你 們."
 
         f1.Display();                           // Display reference for the first time
         scriptureToRemember.DisplayOrg();       // Display the text for the first time
